@@ -1,1 +1,15 @@
 <h1>Our flats</h1>
+<div class="row w-100">
+  <% @flats.each do |flat| %>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card text-center">
+        <%= image_tag "fill_murray.jpg", alt: "alttext"%>
+        <div><%= "#{flat.id} #{flat.name}" %></div>
+        <div><%= flat.address %></div>
+        <div><%= flat.description %></div>
+        <div><%= "#{flat.price_per_night} $$$" %></div>
+        <div><%= "#{flat.number_of_guests} PEOPLE" %></div>
+      </div>
+    </div>
+  <% end %>
+</div>
